@@ -5,7 +5,7 @@ export const Uploader = () => {
     const inputRef = useRef(null)
 
    const handleSubmit = async (event) => {
-       console.log(inputRef.current.files[0])
+
         event.preventDefault();
         const formData = new FormData(); 
      

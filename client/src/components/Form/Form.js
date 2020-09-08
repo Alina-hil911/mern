@@ -8,14 +8,13 @@ const Form = ({ postFilmStart }) => {
     const [values, setValues] = useState({ title: '', releaseYear: '', format: '', stars: '' });
     const [errors, setErrors] = useState({})
 
-    console.log(postFilmStart)
+
     const handleChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value })
     }
     const handleSubmit = (e) => {
         e.preventDefault();
         const errors = validateValues(values)
-        console.log(errors, 'errors')
         if (Object.keys(errors).length === 0) {
             postFilmStart(values);
             setValues({ title: '', releaseYear: '', format: '', stars: '' });

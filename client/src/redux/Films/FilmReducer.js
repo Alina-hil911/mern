@@ -48,14 +48,14 @@ export default (state = INITIAL_STATE, action) => {
             error: action.payload
         }
         case GET_SORTED_FILMS_SUCCESS:
-            console.log('sorted from reducer', action.payload)
+            
             return {
                 ...state,
                 isLoading: false,
                 films: action.payload
             }
         case GET_FILMS_BY_TITLE_SUCCESS:
-            console.log('title from reducer', action.payload);
+            
             return {
                 ...state,
                 isLoading: false,
@@ -64,7 +64,7 @@ export default (state = INITIAL_STATE, action) => {
             }
 
         case GET_FILMS_BY_ACTOR_SUCCESS:
-            console.log('actor from reducer', action.payload);
+           
             return {
                 ...state,
                 isLoading: false,
@@ -72,7 +72,7 @@ export default (state = INITIAL_STATE, action) => {
 
             }
         case DELETE_FILM_SUCCESS:
-            console.log("DELETED FROM REDUCER")
+            
             return {
                 ...state,
                 films: state.films.filter(item => item._id !== action.payload)
